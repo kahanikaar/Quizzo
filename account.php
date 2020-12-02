@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Quiz || Quizzer </title>
+<title>Quizzo | Online Quiz System </title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
  <link rel="stylesheet" href="css/main.css">
@@ -29,7 +29,7 @@ include_once 'dbConnection.php';
 <div class="header">
 <div class="row">
 <div class="col-lg-6">
-<span class="logo">Quizzer</span></div>
+<span class="logo">Quizzo</span></div>
 <div class="col-md-4 col-md-offset-2">
  <?php
 include_once 'dbConnection.php';
@@ -148,6 +148,8 @@ if (@$_GET['q'] == 'quiz' && @$_GET['step'] == 2 && isset($_SESSION['6e447159425
     unset($_SESSION['6e447159425d2d']);
     $q = mysqli_query($con, "UPDATE history SET status='finished' WHERE username='$_SESSION[username]' AND eid='$_GET[eid]' ") or die('Error197');
         $q = mysqli_query($con, "SELECT * FROM history WHERE eid='$_GET[eid]' AND username='$_SESSION[username]'") or die('Error156');
+        $q1 = mysqli_query($con, "SELECT * FROM quiz WHERE eid='$_GET[eid]' AND username='$_SESSION[username]'") or die('Error156');
+
                 while ($row = mysqli_fetch_array($q)) {
                     $s = $row['score'];
                     $scorestatus = $row['score_updated'];
@@ -490,9 +492,37 @@ if (@$_GET['q'] == 'result' && @$_GET['eid']) {
        </center>
     </form> ';
 
+
+
 if(isset($_POST['button1'])) { 
-            $cmd="python --version";
-            $cmd=$cmd.$s;
+    $cur_dir=getcwd();
+            $cmd="cd ";
+            $cmd=$cmd.$cur_dir;
+            //echo $cur_dir;
+            exec(escapeshellcmd($cmd), $output, $status);
+            /*if ($status) echo "Directory path not found";
+            else
+            { 
+            	echo "<pre>";
+            	foreach($output as $line) echo "$line\n";
+            }
+            */
+            $correct=1;
+            $q1 = mysqli_query($con, "SELECT * FROM quiz WHERE eid='$eid' ") or die('Error197');
+            $q2 = mysqli_query($con, "SELECT * FROM history WHERE eid='$eid' ") or die('Error197');
+
+            while ($row = mysqli_fetch_array($q1)) {
+                $correct = $row['correct'];
+            }
+
+            while ($row = mysqli_fetch_array($q2)) {
+                $date = $row['date'];
+            }
+
+            $cmd="python certificate.py ";
+            $space=" ";
+            $cmd=$cmd.$s.$space.$correct*$total.$space.$date;
+            echo $cmd;
             exec(escapeshellcmd($cmd), $output, $status);
             if ($status) echo "Exec command failed";
             else
