@@ -20,9 +20,9 @@ $ pip install -r dependencies.txt
 
 
 ## Running Script
-
-$ python test.py
-
+```
+$ python test.py [NAME] [EXAM] [DATE] [SCORE] [TOTAL] [OUTPUT PATH]
+```
 
 ## Packages Used
 
