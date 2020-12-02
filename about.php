@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Quizzer </title>
+<title>Quizzo | About </title>
   <link rel="icon" href="favicon.ico" type="image/icon" sizes="16x16">
  <link rel="stylesheet" href="css/main.css">
  <link  rel="stylesheet" href="css/font.css">
@@ -18,10 +18,17 @@ if (@$_GET['w']) {
 ?>
 </head>
 
-<body>
+<body style=" 
+       
+            
+       font-family: sans-serif;
+       font-weight: 100;
+   background-image: url(https://raw.githubusercontent.com/kahanikaar/Project-EyT/master/20200712_031013_0000.png);
+    background-position: center left; background-repeat: no-repeat; background-attachment: fixed;
+     background-size: cover; ">
 <div class="row header">
-<div class="col-lg-6">
-<span class="logo">Quizzer</span></div>
+<div class="col-lg-6" style="margin-top:15px;">
+<span class="logo">Quizzo | The Online Quiz Platform</span></div>
 <div class="col-md-2">
 </div>
 <div class="col-md-4">
@@ -75,8 +82,8 @@ if ((!isset($_SESSION['username']))) {
 <div class="bg1">
 <div class="row">
 <div class="col-md-3"></div>
-<div class="col-md-6 panel" style="background-image:url(image/bg1.jpg);background-size:cover; min-height:430px;">
-<h2 align="center" style="font-family:'typo'; color:#000066">About Quizzer</h2>
+<div class="col-md-6 panel" style="background-size:cover; min-height:430px;">
+<h2 align="center" style="font-family:'typo'; color:#000066">About Quizzo</h2>
 <div style="font-size:12px;font-weight:bold; margin-top:20px;word-wrap:break-word"><br />
 <?php
 $file = fopen("about.txt", "r");
@@ -101,15 +108,17 @@ fclose($file);
 <div class="col-md-3"></div></div>
 </div></div>
 </div>
+<footer style="position:absolute; margin-top: 4%;  height:3.5rem; width:100%; background-color: crimson; border-top: 2px solid white; text-align: center; bottom:0;">
 <div class="row footer">
 <div class="col-md-2 box">
 </div>
 <div class="col-md-6 box">
-<span href="#" data-target="#login" style="color:lightyellow">Organized by Quizzer, Institute's Name, Place<br><br></span></div>
+<span href="#" data-target="#login" style="color:lightyellow">Created in Quizzo©<br><br></span></div>
 <div class="col-md-2 box">
 <a href="feedback.php" style="color:lightyellow;text-decoration:underline" onmouseover="this.style('color:yellow')">Feedback</a></div>
 <div class="col-md-2 box">
 <span href="about.php" s style="color:lightyellow;text-decoration:underline" onmouseover="this.style('color:yellow')">About Quizzer</span></div>
 </div>
+</footer>
 </body>
 </html>

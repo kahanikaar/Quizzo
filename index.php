@@ -15,7 +15,7 @@ else{}
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title> Quizzer  </title>
+<title> Quizzo | Online Quiz & Certification System  </title>
    
  <link rel="stylesheet" href="css/main.css">
  <link  rel="stylesheet" href="css/font.css">
@@ -90,11 +90,18 @@ function validateForm() {
 }
 </script>
 </head>
-<body>
+<body style=" 
+       
+            
+       font-family: sans-serif;
+       font-weight: 100;
+   background-image: url(https://raw.githubusercontent.com/kahanikaar/Project-EyT/master/20200712_031013_0000.png);
+    background-position: center left; background-repeat: no-repeat; background-attachment: fixed;
+     background-size: cover; ">
 <div class="header">
 <div class="row">
-<div class="col-lg-6">
-<span class="logo">Quizzer</span></div>
+<div class="col-lg-6" style="margin-top:15px;">
+<span class="logo">Quizzo | The Online Quizzing Platform</span></div>
 <div class="col-md-2 col-md-offset-4">
 <a href="#" class="btn btn-primary logb" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b> Login </b> </span></a></div>
 <div class="modal fade" id="myModal">
@@ -139,9 +146,10 @@ function validateForm() {
 <div class="row">
 
 <div class="col-md-7"></div>
-<div class="col-md-4 panel"> 
+<div class="col-md-4 panel" style="margin-left:33%;"> 
   <form class="form-horizontal" name="form" action="sign.php?q=account.php" onSubmit="return validateForm()" method="POST">
 <fieldset>
+
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
@@ -244,6 +252,7 @@ if ($_GET['branch'] == "IMSC")
 
   </div>
 </div>
+
 <div class="form-group">
   <label class="col-md-12 control-label title1" for="username"></label>
   <div class="col-md-12">
@@ -289,18 +298,20 @@ echo $_GET['phno'];
 
 </fieldset>
 </form>
+
 </div>
 </div></div>
 </div>
+<footer style="position:absolute; margin-top: 4%;  height:3.5rem; width:100%; background-color: crimson; border-top: 2px solid white; text-align: center; bottom:0;">
 <div class="row footer">
 <div class="col-md-2 box">
 <a href="#" data-toggle="modal" data-target="#login" style="color:lightyellow">Admin Login</a></div>
 <div class="col-md-6 box">
-<span href="#" data-target="#login" style="color:lightyellow">Organized by Quizzer, Institute's Name, Place<br><br></span></div>
+<span href="#" data-target="#login" style="color:lightyellow">Created by Quizzo<br><br></span></div>
 <div class="col-md-2 box">
 <a href="feedback.php" style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">Feedback</a></div>
 <div class="col-md-2 box">
-<a href="about.php" s style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">About Quizzer</a></div>
+<a href="about.php" s style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">About Quizzo</a></div>
 </div>
    <div class="modal fade" id="login">
   <div class="modal-dialog">
@@ -329,5 +340,6 @@ echo $_GET['phno'];
     </div>
   </div>
 </div>
+</footer>
 </body>
 </html>

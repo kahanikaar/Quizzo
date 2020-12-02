@@ -1,12 +1,19 @@
 body{overflow-x:hidden;width:100%;font: 12px "Century Gothic", "Times Roman", sans-serif;background:#eee;min-height:550px;background-attachment:fixed;}
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
 .bg{min-height:540px;}
-.bg1{background:url(../image/bg.jpg);min-height:535px;background-repeat: repeat-x;background-color: #202020;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+.bg1{background:url(../image/image.png);min-height:535px;background-repeat: repeat-x;background-color: #202020;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
 @font-face {font-family: 'typo';src: url('../fonts/typo.ttf');}
 @font-face {font-family: 'gothic';src: url('../fonts/gothics.ttf');}
 .panel{border-color:#eee;margin:40px;padding:20px;font: 15px "Century Gothic", "Times Roman", sans-serif;}
-.title{font-family:'typo';}
-.header{background:#202020;height:70px;}
-.logo{font-family:'typo';font-size:35px;color:#ffffff;margin:15px;}
+.title{font-family:'sans-serif';}
+.header{background:crimson;height:70px;}
+.logo{font-family:'fantasy';font-size:35px;color:#ffffff;margin-left:20px;}
 .title1{font: 12px "Century Gothic", "Times Roman", sans-serif;}
 .title2{font-family: 'Ubuntu', sans-serif;font-size:20px;}
 .sub1{color:#FFFFFF;background:#0000ff;font-size:15px;margin:20px;padding:8px;}
@@ -14,7 +21,7 @@ body{overflow-x:hidden;width:100%;font: 12px "Century Gothic", "Times Roman", sa
 .logb:hover{color:lightyellow;}
 .sub{color:#FFFFFF;background:#0000ff;font-size:15px;margin:20px;padding:8px;}
 .sub:hover{background-color:#000066;}
-.footer{font-size:15px;text-align:center;border-top:1px solid;border-color:#323232;background-color:#202020;}
+.footer{font-size:15px;text-align:center;border-top:1px solid;border-color:#323232;background-color:crimson;}
 .footer a{margin:25px;color:#0000ff;text-decoration:none;font: 15px "Century Gothic", "Times Roman", sans-serif;}
 .box{padding:9px;}
 hr{color:#000000;}

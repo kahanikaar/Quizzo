@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title> Admin || Quizzer</title>
+<title> Admin | Quizzo</title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
  <link rel="stylesheet" href="css/main.css">
@@ -36,8 +36,8 @@ $(function () {
 <body  style="background:#eee;">
 <div class="header">
 <div class="row">
-<div class="col-lg-6">
-<span class="logo">Quizzer</span></div>
+<div class="col-lg-6" style="margin-top:15px;">
+<span class="logo">Quizzo | Admin</span></div>
 <?php
 include_once 'dbConnection.php';
 session_start();

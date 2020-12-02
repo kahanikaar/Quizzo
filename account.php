@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Quiz || Quizzer </title>
+<title>Quizzo | Candidate Profile </title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
  <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
  <link rel="stylesheet" href="css/main.css">
@@ -25,11 +25,20 @@ if (@$_GET['w']) {
 <?php
 include_once 'dbConnection.php';
 ?>
-<body>
+<body style=" 
+       
+            
+       font-family: sans-serif;
+       font-weight: 100;
+   background-image: url(https://raw.githubusercontent.com/kahanikaar/Project-EyT/master/20200712_031013_0000.png);
+    background-position: center left; background-repeat: no-repeat; background-attachment: fixed;
+     background-size: cover; ">
+     <div id="page-container">
+     <div id="content-wrap">
 <div class="header">
 <div class="row">
-<div class="col-lg-6">
-<span class="logo">Quizzer</span></div>
+<div class="col-lg-6" style="margin-top:15px;">
+<span class="logo">Quizzo | The Online Quiz Platform</span></div>
 <div class="col-md-4 col-md-offset-2">
  <?php
 include_once 'dbConnection.php';
@@ -63,15 +72,15 @@ if (!(isset($_SESSION['username']))) {
         <li <?php
 if (@$_GET['q'] == 1)
     echo 'class="active"';
-?> ><a href="account.php?q=1"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home<span class="sr-only">(current)</span></a></li>
+?> ><a href="account.php?q=1"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;<b>Home</b><span class="sr-only">(current)</span></a></li>
         <li <?php
 if (@$_GET['q'] == 2)
     echo 'class="active"';
-?>><a href="account.php?q=2"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;My History</a></li>
+?>><a href="account.php?q=2"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;<b>My History</b></a></li>
     <li <?php
 if (@$_GET['q'] == 3)
     echo 'class="active"';
-?>><a href="account.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;Leaderboard</a></li></ul>
+?>><a href="account.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;<b>Leaderboard</b></a></li></ul>
             
       </div>
   </div>
@@ -421,11 +430,11 @@ if (@$_GET['q'] == 'result' && @$_GET['eid']) {
       <tr style="color:darkgreen"><td style="vertical-align:middle">Correct Answer&nbsp;<span class="glyphicon glyphicon-ok-arrow" aria-hidden="true"></span></td><td style="vertical-align:middle">' . $r . '</td></tr> 
     <tr style="color:red"><td style="vertical-align:middle">Wrong Answer&nbsp;<span class="glyphicon glyphicon-remove-arrow" aria-hidden="true"></span></td><td style="vertical-align:middle">' . $w . '</td></tr>
     <tr style="color:orange"><td style="vertical-align:middle">Unattempted&nbsp;<span class="glyphicon glyphicon-ban-arrow" aria-hidden="true"></span></td><td style="vertical-align:middle">' . ($total - $r - $w) . '</td></tr>
-    <tr style="color:darkblue"><td style="vertical-align:middle">Score&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span></td><td style="vertical-align:middle">' . $s . '</td></tr>';
+    <tr style="color:darkblue"><td style="vertical-align:middle">Score&nbsp;</td><td style="vertical-align:middle">' . $s . '</td></tr>';
         $q = mysqli_query($con, "SELECT * FROM rank WHERE  username='$username' ") or die('Error157');
         while ($row = mysqli_fetch_array($q)) {
             $s = $row['score'];
-            echo '<tr style="color:#990000"><td style="vertical-align:middle">Overall Score&nbsp;<span class="glyphicon glyphicon-stats" aria-hidden="true"></span></td><td style="vertical-align:middle">' . $s . '</td></tr>';
+            echo '<tr style="color:#990000"><td style="vertical-align:middle">Overall Score&nbsp;</td><td style="vertical-align:middle">' . $s . '</td></tr>';
         }
         echo '<tr></tr></table></div><div class="panel"><br /><h3 align="center" style="font-family:calibri">:: Detailed Analysis ::</h3><br /><ol style="font-size:20px;font-weight:bold;font-family:calibri;margin-top:20px">';
         $q = mysqli_query($con, "SELECT * FROM questions WHERE eid='$_GET[eid]'") or die('Error197');
@@ -625,15 +634,18 @@ if (@$_GET['q'] == 3) {
     echo '</tr></table></div>';
 }
 ?>
-</div></div></div></div>
+</div></div></div></div></div>
+<footer style="position:absolute; margin-top: 4%;  height:3.5rem; width:100%; background-color: crimson; border-top: 2px solid white; text-align: center; bottom:0;">
 <div class="row footer">
  <div class="col-md-2 box"></div>
 <div class="col-md-6 box">
-<span href="#" data-target="#login" style="color:lightyellow">Organized by Quizzer, Institute's Name, Place<br><br></span></div>
+<span href="#" data-target="#login" style="color:lightyellow">Created in Quizzo©<br><br></span></div>
 <div class="col-md-2 box">
 <a href="feedback.php" style="color:lightyellow;text-decoration:underline" onmouseover="this.style('color:yellow')" target="new">Feedback</a></div>
 <div class="col-md-2 box">
-<a href="about.php" s style="color:lightyellow;text-decoration:underline" onmouseover="this.style('color:yellow')" target="new">About Quizzer</a></div>
+<a href="about.php" s style="color:lightyellow;text-decoration:underline" onmouseover="this.style('color:yellow')" target="new">About Quizzo</a></div>
+</div>
+</footer>
 </div>
 </body>
 </html>
