@@ -9,12 +9,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 Certificate Generator requires [ **Python (> Python 3.5)**](https://www.python.org/) .
 
-#### Get the project.
-
-```sh
-$ git clone https://github.com/gdsoumya/certificate-generator.git
-or 
-Download and extract the Zip-File
 ```
 ### Installing Dependencies
 The Project has a few dependencies which can be installed by running.
