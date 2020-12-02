@@ -278,9 +278,9 @@ if (@$_GET['q'] == 4 && !(@$_GET['step'])) {
   </div>
 </div>
 <div class="form-group">
-  <label class="col-md-12 control-label" for="right"></label>  
+  <label class="col-md-12 control-label" for="correct"></label>  
   <div class="col-md-12">
-  <input id="right" name="right" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number">
+  <input id="correct" name="correct" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number">
     
   </div>
 </div>

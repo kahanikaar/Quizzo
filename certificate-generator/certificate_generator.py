@@ -56,17 +56,17 @@ class Certificate:
 			self.y3 = int(config['DATE']['DATE_Y'])
 			self.width3 = int(config['DATE']['DATE_WIDTH'])
 			self.font4 = config['SCORE']['SCORE_FONT']
-                        self.color4 = config['SCORE']['SCORE_COLOR']
-                        self.size4 = int(config['SCORE']['SCORE_FONT_SIZE'])
+			self.color4 = config['SCORE']['SCORE_COLOR']
+			self.size4 = int(config['SCORE']['SCORE_FONT_SIZE'])
 			self.x4 = int(config['SCORE']['SCORE_X'])
-                        self.y4 = int(config['SCORE']['SCORE_y'])
-                        self.width4 = int(config['SCORE']['SCORE_WIDTH'])
+			self.y4 = int(config['SCORE']['SCORE_y'])
+			self.width4 = int(config['SCORE']['SCORE_WIDTH'])
 			self.font5 = config['TOTAL']['TOTAL_FONT']
-                        self.color5 = config['TOTAL']['TOTAL_COLOR']
-                        self.size5 = int(config['TOTAL']['TOTAL_FONT_SIZE'])
-                        self.x5 = int(config['TOTAL']['TOTAL_X'])
-                        self.y5 = int(config['TOTAL']['TOTAL_y'])
-                        self.width5 = int(config['TOTAL']['TOTAL_WIDTH'])
+			self.color5 = config['TOTAL']['TOTAL_COLOR']
+			self.size5 = int(config['TOTAL']['TOTAL_FONT_SIZE'])
+			self.x5 = int(config['TOTAL']['TOTAL_X'])
+			self.y5 = int(config['TOTAL']['TOTAL_y'])
+			self.width5 = int(config['TOTAL']['TOTAL_WIDTH'])
 
 
 		except:
@@ -106,9 +106,9 @@ class Certificate:
 		width = font3.getsize(self.date)[0]
 		draw.text((self.x3+(self.width3-width)/2, self.y3-self.size3), self.date, fill=self.color3, font=font3)
 		width = font4.getsize(self.score)[0]
-                draw.text((self.x4+(self.width4-width)/2, self.y4-self.size4), self.score, fill=self.color4, font=font4)
+		draw.text((self.x4+(self.width4-width)/2, self.y4-self.size4), self.score, fill=self.color4, font=font4)
 		width = font5.getsize(self.total)[0]
-                draw.text((self.x5+(self.width5-width)/2, self.y5-self.size5), self.total, fill=self.color5, font=font5)
+		draw.text((self.x5+(self.width5-width)/2, self.y5-self.size5), self.total, fill=self.color5, font=font5)
 		
 		try:
 			image.save(self.output)

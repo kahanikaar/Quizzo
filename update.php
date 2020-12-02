@@ -70,14 +70,15 @@ if (isset($_SESSION['key'])) {
 if (isset($_SESSION['key'])) {
     if (@$_GET['q'] == 'addquiz' && $_SESSION['key'] == '54585c506829293a2d4c3b68543b316e2e7a2d277858545a36362e5f39') {
         $name    = $_POST['name'];
+        $eid = @$_GET['eid'];
         $name    = ucwords(strtolower($name));
         $total   = $_POST['total'];
-        $correct = $_POST['right'];
+        $correct = $_POST['correct'];
         $wrong   = $_POST['wrong'];
         $time    = $_POST['time'];
         $status  = "disabled";
         $id      = uniqid();
-        $q3      = mysqli_query($con, "INSERT INTO quiz VALUES(NULL,'$id','$name','$correct','$wrong','$total','$time', 'NOW()','$status')");
+        $q3      = mysqli_query($con, "INSERT INTO quiz VALUES(NULL,'$id','$name','$correct','$wrong','$total','$time',NOW(),'$status')") ;
         header("location:dash.php?q=4&step=2&eid=$id&n=$total");
     }
 }

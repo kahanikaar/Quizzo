@@ -41,11 +41,7 @@ function validateForm() {
     document.getElementById("errormsg").innerHTML="Please select your branch";
     return false;
   }
-  var rn = (document.forms["form"]["rollno"].value).split("/");
-  if (rn.length != 3) {
-    document.getElementById("errormsg").innerHTML="Incorrect Rollno. Please enter in the format (BE/10XXX/YY)";
-    return false;
-  }
+ 
   if((rn[0].length != 2 && rn[0].length != 3) || (rn[0].match(/[A-Z]/g)).length != rn[0].length){
     document.getElementById("errormsg").innerHTML="Incorrect Rollno "+rn[0]+". Make sure all letters are capital (Ex. 'BE' in BE/10XXX/YY)";
     return false;
@@ -177,7 +173,7 @@ echo $_GET['name'];
 <div class="form-group">
   <label class="col-md-12 control-label" for="rollno"></label>  
   <div class="col-md-12">
-  <input id="rollno" name="rollno" placeholder="Enter your Roll no (Ex. BE/10XXX/YY)" class="form-control input-md" type="text" value="<?php
+  <input id="rollno" name="rollno" placeholder="Enter your Roll no" class="form-control input-md" type="text" value="<?php
 echo $_GET['rollno'];
 ?>">
     

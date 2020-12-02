@@ -17,13 +17,15 @@ if x==1:
 else:
 	print("\nSTATUS: FAILED\n")
 '''
-
+print(sys.argv)
 a=sys.argv[1]
+
 b=sys.argv[2]
-c=sys.argv[3]
-d=sys.argv[4]
-e=sys.argv[5]
-f=sys.argv[6]
+c=str(sys.argv[5])
+d=str(sys.argv[3])
+e=str(sys.argv[4])
+
+f="outputcertificate.png"
 
 ct = Certificate(a,b,c,d,e,f)
 x = ct.create()
