@@ -15,7 +15,7 @@ else{}
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title> Quizzer  </title>
+<title> Quizzo  </title>
    
  <link rel="stylesheet" href="css/main.css">
  <link  rel="stylesheet" href="css/font.css">
@@ -98,7 +98,7 @@ function validateForm() {
 <div class="header">
 <div class="row">
 <div class="col-lg-6">
-<span class="logo">Quizzer</span></div>
+<span class="logo">Quizzo</span></div>
 <div class="col-md-2 col-md-offset-4">
 <a href="#" class="btn btn-primary logb" data-toggle="modal" data-target="#myModal"> <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b> Login </b> </span></a></div>
 <div class="modal fade" id="myModal">
@@ -143,7 +143,7 @@ function validateForm() {
 <div class="row">
 
 <div class="col-md-7"></div>
-<div class="col-md-4 panel"> 
+<div class="col-md-4 panel rainbow"> 
   <form class="form-horizontal" name="form" action="sign.php?q=account.php" onSubmit="return validateForm()" method="POST">
 <fieldset>
 <div class="form-group">
@@ -296,15 +296,15 @@ echo $_GET['phno'];
 </div>
 </div></div>
 </div>
-<div class="row footer">
+<div class="footer">
 <div class="col-md-2 box">
 <a href="#" data-toggle="modal" data-target="#login" style="color:lightyellow">Admin Login</a></div>
 <div class="col-md-6 box">
-<span href="#" data-target="#login" style="color:lightyellow">Organized by Quizzer, Institute's Name, Place<br><br></span></div>
+<span href="#" data-target="#login" style="color:lightyellow">Organized by Quizzo, IIIT BBSR<br><br></span></div>
 <div class="col-md-2 box">
 <a href="feedback.php" style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">Feedback</a></div>
 <div class="col-md-2 box">
-<a href="about.php" s style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">About Quizzer</a></div>
+<a href="about.php" s style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">About Quizzo</a></div>
 </div>
    <div class="modal fade" id="login">
   <div class="modal-dialog">
