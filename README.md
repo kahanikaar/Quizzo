@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Quizzo  
 ## The Online Quiz & Certification System  
 
@@ -10,8 +9,6 @@ Instructions to run
   
 Software Requirements  
 Mysql Ver 14.14 Distrib 5.7.29, Python 3.7.3, PHP 7.2.24   
-
-
 
 
 
@@ -29,13 +26,7 @@ The Project has a few dependencies which can be installed by running following c
 ```sh
 $ cd certificate-generator
 $ pip install -r dependencies.txt 
-```
 
-
-
-## Running Script
-```
-$ python test.py [NAME] [EXAM] [DATE] [SCORE] [TOTAL] [OUTPUT PATH]
 ```
 
 ## Packages Used
@@ -44,6 +35,3 @@ $ python test.py [NAME] [EXAM] [DATE] [SCORE] [TOTAL] [OUTPUT PATH]
 - **[Configparser](https://docs.python.org/3/library/configparser.html)** : For reading config file.
 
 
-=======
-# Quizzo | The Online Quiz & Certification System
->>>>>>> 097207fe35031d4865fbc2badfb0cce79b723ca6
