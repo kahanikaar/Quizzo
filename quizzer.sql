@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'sonudoo', '1234567890');
+(1, 'admin', '1234567890');
 
 -- --------------------------------------------------------
 
@@ -54,11 +54,6 @@ CREATE TABLE IF NOT EXISTS `answer` (
 --
 -- Dumping data for table `answer`
 --
-
-INSERT INTO `answer` (`id`, `qid`, `ansid`) VALUES
-(1, '58027e82e62e3', '58027e82f2412'),
-(2, '58027e833dd54', '58027e8347514'),
-(3, '58027e8371483', '58027e838f19a');
 
 -- --------------------------------------------------------
 
@@ -100,8 +95,7 @@ CREATE TABLE IF NOT EXISTS `history` (
 -- Dumping data for table `history`
 --
 
-INSERT INTO `history` (`id`, `username`, `eid`, `score`, `level`, `correct`, `wrong`, `date`, `timestamp`, `status`,`score_updated`) VALUES
-(1, 'sonudoo', '5802790f793b1', 12, 3, 3, 0, '2016-10-15 19:11:55', 1476558671, 'finished','false');
+
 
 -- --------------------------------------------------------
 
@@ -120,19 +114,6 @@ CREATE TABLE IF NOT EXISTS `options` (
 -- Dumping data for table `options`
 --
 
-INSERT INTO `options` (`id`, `qid`, `option`, `optionid`) VALUES
-(1, '58027e82e62e3', 'Yes', '58027e82f2412'),
-(2, '58027e82e62e3', 'No', '58027e82f2427'),
-(3, '58027e82e62e3', 'Don''t want to', '58027e82f2433'),
-(4, '58027e82e62e3', 'Why should I', '58027e82f243d'),
-(5, '58027e833dd54', 'sonudoo', '58027e8347505'),
-(6, '58027e833dd54', 'sunnygkp10', '58027e8347514'),
-(7, '58027e833dd54', 'markzuckerberg', '58027e834751b'),
-(8, '58027e833dd54', 'me', '58027e8347521'),
-(9, '58027e8371483', 'sonudoo', '58027e838f19a'),
-(10, '58027e8371483', 'sunnygkp10', '58027e838f1b0'),
-(11, '58027e8371483', 'me', '58027e838f1ba'),
-(12, '58027e8371483', 'markzuckerberg', '58027e838f1c4');
 
 -- --------------------------------------------------------
 
@@ -152,11 +133,6 @@ CREATE TABLE IF NOT EXISTS `questions` (
 --
 -- Dumping data for table `questions`
 --
-
-INSERT INTO `questions` (`id`, `eid`, `qid`, `qns`, `choice`, `sn`) VALUES
-(1, '5802790f793b1', '58027e82e62e3', 'Have you read the README file?', 4, 1),
-(2, '5802790f793b1', '58027e833dd54', 'Who is the Original creator of this quizzing site?', 4, 2),
-(3, '5802790f793b1', '58027e8371483', 'Who improved the original version of this quizzing site?', 4, 3);
 
 -- --------------------------------------------------------
 
@@ -180,8 +156,7 @@ CREATE TABLE IF NOT EXISTS `quiz` (
 -- Dumping data for table `quiz`
 --
 
-INSERT INTO `quiz` (`id`, `eid`, `title`, `correct`, `wrong`, `total`, `time`, `date`, `status`) VALUES
-(1, '5802790f793b1', 'Sample Quiz', 4, 1, 3, 3, '2016-10-15 19:09:11', 'enabled');
+
 
 -- --------------------------------------------------------
 
@@ -200,8 +175,6 @@ CREATE TABLE IF NOT EXISTS `rank` (
 -- Dumping data for table `rank`
 --
 
-INSERT INTO `rank` (`id`, `username`, `score`, `time`) VALUES
-(1, 'sonudoo', 12, '2016-10-15 19:11:55');
 
 -- --------------------------------------------------------
 
@@ -224,8 +197,6 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `rollno`, `branch`, `gender`, `username`, `phno`, `password`) VALUES
-(1, 'Sushant Kumar Gupta', 'BE/10001/15', 'CSE', 'M', 'sonudoo', 1234567890, 'e807f1fcf82d132f9bb018ca6738a19f');
 
 -- --------------------------------------------------------
 
@@ -245,11 +216,6 @@ CREATE TABLE IF NOT EXISTS `user_answer` (
 --
 -- Dumping data for table `user_answer`
 --
-
-INSERT INTO `user_answer` (`id`, `qid`, `ans`, `correctans`, `eid`, `username`) VALUES
-(1, '58027e82e62e3', '58027e82f2412', '58027e82f2412', '5802790f793b1', 'sonudoo'),
-(2, '58027e833dd54', '58027e8347514', '58027e8347514', '5802790f793b1', 'sonudoo'),
-(3, '58027e8371483', '58027e838f19a', '58027e838f19a', '5802790f793b1', 'sonudoo');
 
 --
 -- Indexes for dumped tables
