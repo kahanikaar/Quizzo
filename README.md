@@ -21,7 +21,7 @@ One can simply generate a customized certificate by providing the certificate te
 Certificate Generator requires [ **Python (> Python 3.5)**](https://www.python.org/) .  
 
 ```
-### Installing Dependencies
+Installing Dependencies
 The Project has a few dependencies which can be installed by running following command in terminal or command prompt.
 $ cd certificate-generator
 $ pip install -r dependencies.txt 
