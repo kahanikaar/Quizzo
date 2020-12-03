@@ -23,7 +23,6 @@ Certificate Generator requires [ **Python (> Python 3.5)**](https://www.python.o
 ```
 ### Installing Dependencies
 The Project has a few dependencies which can be installed by running following command in terminal or command prompt.
-```sh
 $ cd certificate-generator
 $ pip install -r dependencies.txt 
 
