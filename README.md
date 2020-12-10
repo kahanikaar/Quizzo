@@ -33,4 +33,4 @@ $ pip install -r dependencies.txt
 - **[PILLOW](https://pillow.readthedocs.io/en/stable/)** : For Image Processing
 - **[Configparser](https://docs.python.org/3/library/configparser.html)** : For reading config file.
 
-
+With ideas from **[Link for Quiz System](https://github.com/sonudoo/online-quiz-system)** and **[Link for Certification System](https://github.com/yathartharora/event_certificates)**
